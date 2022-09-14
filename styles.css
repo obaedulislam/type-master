@@ -5,12 +5,15 @@
 }
 
 body {
+  padding: 50px 0;
   background-image: url("./bg.png");
   background-size: cover;
   background-position: left top;
   font-family: "Zilla Slab", serif;
 }
-
+.margin-bottom{
+  margin-bottom: 8px;
+}
 .box-container {
   width: 70%;
   margin: 0 auto;
@@ -90,6 +93,9 @@ body {
 .bold {
   font-weight: 700;
 }
+.semi-bold {
+  font-weight: 600;
+}
 .inactive {
   border: 2px solid white !important;
 }
@@ -99,7 +105,7 @@ body {
 .title {
   text-align: center;
   color: white;
-  margin: 20px 0;
+  margin: 0 0 20px;
 }
 
 .divider-container {
@@ -142,19 +148,17 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
   width: 100%;
   height: 100%;
-  padding: 50px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 20px;
   color: white;
   border-radius: 15px;
   background: rgb(255, 255, 255);
@@ -164,7 +168,6 @@ button {
     rgba(255, 255, 255, 0.05) 99.85%
   );
   backdrop-filter: blur(5px);
-  margin-bottom: 30px;
 }
 
 #modal-background {
@@ -181,12 +184,17 @@ button {
   top: 0;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
   }
   .card {
     flex-direction: column;
+  }
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
 }
