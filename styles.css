@@ -189,8 +189,17 @@ button {
     padding: 0 20px;
     width: 100%;
   }
+  #question{
+    font-size: 20px;
+  }
+  #display {
+    font-size: 22px;
+  }
   .card {
     flex-direction: column;
+  }
+  .card h3{
+    font-size: 18px;
   }
   #histories {
     display: grid;
