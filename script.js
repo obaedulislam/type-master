@@ -83,9 +83,9 @@ const gameOver = () => {
   display.classList.add("inactive");
   // show result
   resultModal.innerHTML += `
-    <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span id="error-count" class="bold red">${errorCount}</span> mistakes</p>
+    <h1 class="margin-bottom">Finished!</h1>
+    <p class="margin-bottom">You took: <span class="bold ">${timeTaken}</span> seconds</p>
+    <p class="margin-bottom">You made <span id="error-count" class="bold red ">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 
