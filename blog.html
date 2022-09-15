@@ -38,28 +38,29 @@
               </thead>
               <tbody>
                 <tr class="table-active">
-                  <td  class="p-3 w-50 border ">Local Storage maintains a separate storage area for each given origin, but persists even when the browser is closed and reopened.</td>
-                  <td  class="p-3 w-50 border "> Session Storage maintains a separate storage area for each given origin(Same-origin policy) that's available for the duration of the page session (as long as the browser is open, including page reloads and restores).</td>
-                </tr>
-                
-                <tr>
                   <td  class="p-3 w-50 border ">Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data</td>
                   <td  class="p-3 w-50 border ">It stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.</td>
                 </tr>
 
-                <tr class="table-active">
+                <tr >
                   <td  class="p-3 w-50 border ">As it is not session-based, it must be deleted via javascript or manually</td>
                   <td  class="p-3 w-50 border ">It’s session-based and works per window or tab. This means that data is stored only for the duration of a session, i.e., until the browser (or tab) is closed</td>
                 </tr>
 
-                <tr >
+                <tr class="table-active">
                   <td  class="p-3 w-50 border ">The storage capacity of local storage is 5MB/10MB</td>
                   <td  class="p-3 w-50 border ">The storage capacity of session storage is 5MB</td>
                 </tr>
 
-                <tr class="table-active">
-                  <td  class="p-3 w-50 border ">Local storage object - Stores data with no expiration date</td>
-                  <td  class="p-3 w-50 border ">Session storage object - Stores data for one session (data is lost when the browser tab is closed)</td>
+                <tr >
+                  <td  class="p-3 w-50 border ">
+                    <p class=" fs-5">Example:</p>
+                    <img src="images/local-storage.png" alt="Local Storage" class="img-fluid  w-100">
+                  </td>
+                  <td  class="p-3 w-50 border ">
+                    <p class=" fs-5">Example:</p>
+                    <img src="images/session-storage.png" alt="Session Storage" class="img-fluid  w-100">
+                  </td>
                 </tr>
                 
               </tbody>
@@ -83,16 +84,16 @@
               <tbody>
                 <tr class="table-active">
                   <td  class="p-3 w-50 border ">Variables declared Globally (outside any function) or curly brackets {} have Global Scope.</td>
-                  <td  class="p-3 w-50 border "> TVariables declared inside any function or curly brackets {} have Block Scope.</td>
+                  <td  class="p-3 w-50 border "> Variables declared inside any function or curly brackets {} have Block Scope.</td>
                 </tr>
                 
                 <tr>
                   <td  class="p-3 w-50 border ">Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.</td>
-                  <td  class="p-3 w-50 border ">Block scope can only accessed on that bloc. These curly brackets can be of loops, or conditional statements, or something else.</td>
+                  <td  class="p-3 w-50 border ">Block scope can only accessed on that block. These curly brackets can be of loops, or conditional statements, or something else.</td>
                 </tr>
 
                 <tr class="table-active">
-                  <td  class="p-3 w-50 border ">You can access global scope varibale from any place of the scope. But it is not a good practice to use global variables when they are not needed as every code block will have access to those variables.</td>
+                  <td  class="p-3 w-50 border ">If you want you can access a global variable from any place of code block. </td>
                   <td  class="p-3 w-50 border ">If you are trying to refer to the local variable from outside the function you will get an error (“status(variable name) is not defined”)</td>
                 </tr>
 
@@ -133,7 +134,7 @@
             <div class="event-img text-center  mt-3 ">
               <img src="images/event-loop-code.png" alt="Event Loop" class="img-fluid">
             </div>
-            <p class="text-light mt-2 par-text"><code class="text-warning  fw-bold fs-5">queue.waitForMessage() </code>waits synchronously for a message to arrive (if one is not already available and waiting to be handled).</p>
+            <p class="text-light mt-2 par-text"><code class="text-warning  fw-bold">queue.waitForMessage() </code>waits synchronously for a message to arrive (if one is not already available and waiting to be handled).</p>
           </div>
         </div>
         <!--Single Blog End-->
@@ -143,29 +144,40 @@
           <div class="blog-content mt-4">
             <h5><span class="fs-4 fw-bold text-light mt-2">Answer:-</span> </h5>
             <p class="text-light par-text">An <code class="text-warning  fw-bold">undefined</code> variable or anything without a value will always return "<code class="text-warning  fw-bold">undefined</code>" in JavaScript. This is not the same as null, despite the fact that both imply an empty state..</p>
-            <p class="text-light par-text">You'll typically assign a value to a variable after you declare it, but this is not always the case.</p>
             <p class="text-light par-text">When a variable is declared or initialized but no value is assigned to it, JavaScript automatically displays "<code class="text-warning  fw-bold">undefined</code>".</p>
             <h5 class="text-light">Also, when you try accessing values in, for example, an array or object that doesn’t exist, it will throw <code class="text-warning  fw-bold">undefined</code>.</h5>
-            <div class="event-img text-center mt-4">
-              <img src="images/undefined-code.png" alt="undefined" class="img-fluid">
-            </div>
-            <h4 class="text-light mt-3">Here are some way that we will get <code class="text-warning  fw-bold">undefined</code>:</h4>
-            <div class="list-item">
+            <h5 class="text-light mt-4">Here are some way that we will get <code class="text-warning  fw-bold">undefined</code>:</h5>
+            <div class="list-item mt-3">
               <ol>
                 <li class="text-light par-text">
-                  <p >Accessing an uninitialized variable</p>
+                  <p class="text-light par-text">Accessing an uninitialized variable</p>
+                  <div class="event-img mt-3 ms-sm-5 ms-0">
+                    <img src="images/undefined-uninitialized.png" alt="undefined" class="img-fluid">
+                  </div>
                 </li>
-                <li class="text-light par-text">
-                  <p >Accessing a non-existing property of an object</p>
+                <li class="text-light par-text mt-4">
+                  <p class="text-light par-text">Accessing a non-existing property of an object</p>
+                  <div class="event-img mt-3 ms-sm-5 ms-0">
+                    <img src="images/undefined-code.png" alt="undefined" class="img-fluid">
+                  </div>
                 </li>
-                <li class="text-light par-text">
-                  <p >Accessing a out-of-bounds array element returns <code class="text-warning  fw-bold">undefined</code>.</p>
+                <li class="text-light par-text mt-4">
+                  <p class="text-light par-text">Accessing a out-of-bounds array element returns <code class="text-warning  fw-bold">undefined</code>.</p>
+                  <div class="event-img mt-3 ms-sm-5 ms-0">
+                    <img src="images/undefined-outbounds.png" alt="undefined" class="img-fluid">
+                  </div>
                 </li>
-                <li  class="text-light par-text">
-                  <p>A function without a return statement or with a return statement but without an expression returns <code class="text-warning  fw-bold">undefined</code>.</p>
+                <li  class="text-light par-text mt-4">
+                  <p class="text-light par-text">A function without a return statement or with a return statement but without an expression returns <code class="text-warning  fw-bold">undefined</code>.</p>
+                  <div class="event-img mt-3 ms-sm-5 ms-0">
+                    <img src="images/undefined-function-return.png" alt="undefined" class="img-fluid">
+                  </div>
                 </li>
-                <li class="text-light par-text">
-                  <p > Accessing an uninitialized variable</p>
+                <li class="text-light par-text mt-4">
+                  <p class="text-light par-text"> Function that call but dont pass all arguments. </p>
+                  <div class="event-img mt-3 ms-sm-5 ms-0">
+                    <img src="images/undefined-function.png" alt="undefined" class="img-fluid">
+                  </div>
                 </li>
               </ol>
             </div>
