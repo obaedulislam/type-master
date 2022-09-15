@@ -232,5 +232,16 @@ main{
   }
   /* Home CSS End Here */
 
-
+  /* Blog CSS Start Here */
+  header, main, footer{
+    margin: 0  auto;
+    width: 100%;
+  }
+  header h1{
+    font-size: 38px;
+  } 
+  .blog-content table td, .par-text{
+    font-size: 16px;
+  } 
+  /* Blog CSS End Here */
 }
