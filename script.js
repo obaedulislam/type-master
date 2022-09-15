@@ -57,7 +57,7 @@ const typeController = (e) => {
     gameOver();
   }
 };
-
+//Validate text
 const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
@@ -98,11 +98,13 @@ const gameOver = () => {
   display.classList.add("inactive");
 };
 
+// Modal Closed
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
 };
 
+// Start Type
 const start = () => {
   // If already started, do not start again
   if (startTime) return;
