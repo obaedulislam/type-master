@@ -196,10 +196,10 @@ header h1{
   font-size: 48px;
 }
 
-.single-blog{
+main{
   background-color: #171717;
 }
-.blog-content table td{
+.blog-content table td, .par-text{
   font-size: 18px;
 }
 .code-img{
@@ -208,6 +208,7 @@ header h1{
 /* === Blog CSS End Here === */
 
 @media only screen and (max-width: 768px) {
+  /* Home CSS Start Here */
   .box-container {
     padding: 0 20px;
     width: 100%;
@@ -229,4 +230,7 @@ header h1{
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
+  /* Home CSS End Here */
+
+
 }

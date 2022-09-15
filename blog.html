@@ -21,7 +21,7 @@
 
 
     <!--==| Main Section Start |==-->
-    <main class="p-5">
+    <main class="p-md-5 p-3">
       <section >
         <div class="single-blog">
           <h2 class="text-white">1. Difference Between Local Storage & Session Storage in JavaScript.</h2>
@@ -107,6 +107,65 @@
             </table>
           </div>
         </div>
+        <!--Single Blog End-->
+
+        <div class="single-blog mt-5">
+          <h2 class="text-white">3. JavaScript Event Loop Working pocedure</h2>
+          <div class="blog-content mt-4">
+            <p class="text-light par-text"><span class="fw-semibold fs-5">Ans:</span>   JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.</p>
+            <p class="text-light par-text">The event loop  is a process that waits for the Call Stack  to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process.</p>
+            <h5 class="text-light">The following picture illustrates JavaScript runtime, Web API, Call stack, and Event loop:</h5>
+            <div class="event-img text-center mt-4">
+              <img src="images/event-loop.gif" alt="Event Loop" class="img-fluid">
+            </div>
+            <h5 class="text-light mt-4 fw-semibold">Runtime concepts</h5>
+            <p class="text-light par-text">The following sections explain a theoretical model. Modern JavaScript engines implement and heavily optimize the described semantics.</p>
+            <h5 class="text-light">Visual representation</h5>
+            <div class="event-img text-center mt-3">
+              <img src="images/the_javascript_runtime_environment_example.svg" alt="Event Loop" class="img-fluid">
+            </div>
+            <p class="text-light mt-4 par-text">The event loop got its name because of how it's usually implemented, which usually resembles:</p>
+            <div class="event-img text-center  mt-3 ">
+              <img src="images/event-loop-code.png" alt="Event Loop" class="img-fluid">
+            </div>
+            <p class="text-light mt-2 par-text"><code class="text-warning  fw-bold fs-5">queue.waitForMessage() </code>waits synchronously for a message to arrive (if one is not already available and waiting to be handled).</p>
+          </div>
+        </div>
+        <!--Single Blog End-->
+
+        <div class="single-blog mt-5">
+          <h2 class="text-white">4. How many time we will get <code class="text-warning  fw-bold"><code class="text-warning  fw-bold">undefined</code></code>?</h2>
+          <div class="blog-content mt-4">
+            <p class="text-light par-text"><span class="fw-semibold fs-5">Ans:</span>   An <code class="text-warning  fw-bold">undefined</code> variable or anything without a value will always return "<code class="text-warning  fw-bold">undefined</code>" in JavaScript. This is not the same as null, despite the fact that both imply an empty state..</p>
+            <p class="text-light par-text">You'll typically assign a value to a variable after you declare it, but this is not always the case.</p>
+            <p class="text-light par-text">When a variable is declared or initialized but no value is assigned to it, JavaScript automatically displays "<code class="text-warning  fw-bold">undefined</code>".</p>
+            <h5 class="text-light">Also, when you try accessing values in, for example, an array or object that doesn’t exist, it will throw <code class="text-warning  fw-bold">undefined</code>.</h5>
+            <div class="event-img text-center mt-4">
+              <img src="images/undefined-code.png" alt="undefined" class="img-fluid">
+            </div>
+            <h4 class="text-light mt-3">Here are some way that we will get <code class="text-warning  fw-bold">undefined</code>:</h4>
+            <div class="list-item">
+              <ol>
+                <li class="text-light par-text">
+                  <p >Accessing an uninitialized variable</p>
+                </li>
+                <li class="text-light par-text">
+                  <p >Accessing a non-existing property of an object</p>
+                </li>
+                <li class="text-light par-text">
+                  <p >Accessing a out-of-bounds array element returns <code class="text-warning  fw-bold">undefined</code>.</p>
+                </li>
+                <li  class="text-light par-text">
+                  <p>A function without a return statement or with a return statement but without an expression returns <code class="text-warning  fw-bold">undefined</code>.</p>
+                </li>
+                <li class="text-light par-text">
+                  <p > Accessing an uninitialized variable</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!--Single Blog End-->
       </section>
     </main>
     <!--==| Main Section End |==-->
