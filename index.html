@@ -5,40 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Speed Monster</title>
+
+    <!--==| All CSS File Inegration Start |==-->
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet"/>
+    <!--==| All CSS File Inegration End |==-->
   </head>
+
   <body>
-    <h1 class="title"><img src="./logo.png" /></h1>
-    <div id="show-time">0 seconds</div>
+    <!--==| HeaderSection End |==-->
+    <header>
+      <!--Header Logo-->
+      <h1 class="title"><img src="./logo.png" /></h1>
+      <!-- Header Timer-->
+      <div id="show-time">0 seconds</div>
+    </header>
+    <!--==| Header Section End |==-->
 
-    <div class="box-container">
-      <div id="question"></div>
+   <!--==| Main Section End |==-->
+    <main>
+      <div class="box-container">
+        <div id="question"></div>
+        <div id="display" class="inactive"></div>
+        <!--Input Text Section End-->
 
-      <div id="display" class="inactive"></div>
+        <div class="buttons">
+          <button id="starts">START</button>
+        </div>
+        <!--Start to Type Button Event End-->
 
-      <div class="buttons">
-        <button id="starts">START</button>
+        <div class="divider-container">
+          <div class="line"></div>
+          <h1 class="title2">History</h1>
+          <div class="line"></div>
+        </div>
+        <div id="histories"></div>
+        <!--History Section End-->
       </div>
+      <!--Website Content Div End-->
 
-      <div class="divider-container">
-        <div class="line"></div>
-        <h1 class="title2">History</h1>
-        <div class="line"></div>
-      </div>
-      <div id="histories"></div>
-    </div>
+      <div id="countdown"></div>
+      <div id="modal-background" class="hidden"></div>
+      <div id="result" class="hidden"></div>
+      <!--Contdown Timer End-->
+    </main>
+   <!--==| Main Section End |==-->
 
-    <div id="countdown"></div>
-    <div id="modal-background" class="hidden"></div>
-    <div id="result" class="hidden"></div>
-
+    <!--==| All JS File Inegration Start |==-->
     <script src="./history.js"></script>
     <script src="./script.js"></script>
+    <!--==| All JS File Inegration End |==-->
   </body>
 </html>

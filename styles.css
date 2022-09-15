@@ -195,10 +195,11 @@ header, main, footer{
 header h1{
   font-size: 48px;
 }
-
 main{
   background-color: #171717;
+  border: 1px solid rgb(73, 73, 73);
 }
+
 .blog-content table td, .par-text{
   font-size: 18px;
 }
@@ -237,6 +238,7 @@ main{
     margin: 0  auto;
     width: 100%;
   }
+
   header h1{
     font-size: 38px;
   } 
